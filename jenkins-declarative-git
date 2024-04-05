@@ -4,7 +4,7 @@ pipeline{
         stage('git checkout')
         {
             steps{
-                git credentialsId: 'github', url: 'https://github.com/siddireddylakshman/devops-automation'
+                git credentialsId: 'github', url: 'https://github.com/siddireddylakshman/devops-automation.git'
             }
         }
     }
