@@ -20,7 +20,7 @@ pipeline {
          stage('Push image to Hub'){
             steps{
                 script{
-                   withCredentials([string(credentialsId: 'Docker', variable: 'dockerhubpwd')]) {
+                   withCredentials([usernamePassword(credentialsId: 'Docker', usernameVariable: 'PEGA_DB_USERNAME', passwordVariable: 'PEGA_DB_PASSWORD')]) {
                    bat 'docker login -u Siddireddy -p ${dockerhubpwd}'
 
 }
