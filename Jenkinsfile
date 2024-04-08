@@ -20,7 +20,7 @@ pipeline {
         stage('Push image to Hub'){
             steps{
                 script{
-                   withCredentials([string(credentialsId: 'docer', variable: 'Schneider!')]) {
+                   withCredentials([string(credentialsId: 'docer', variable: 'dockerhubpwd')]) {
                    bat 'docker login -u javatechie -p ${dockerhubpwd}'
 
 }
