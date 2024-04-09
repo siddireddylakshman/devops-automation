@@ -24,7 +24,7 @@ pipeline {
                    bat 'docker login -u siddireddy --password-stdin < f:/password.txt' 
                    }
                    bat 'docker tag devops-integration siddireddy/mymtechproj:myfirstimagepush'
-                   bat 'docker push siddireddy/mymtechproj:devops-integration:myfirstimagepush'
+                   bat 'docker push siddireddy/mymtechproj:myfirstimagepush'
                 }
             }
         }
