@@ -23,7 +23,7 @@ pipeline {
                    withCredentials([usernamePassword(credentialsId: 'DockerNew', usernameVariable: 'PEGA_DB_USERNAME', passwordVariable: 'PEGA_DB_PASSWORD')]) {                                    
                    bat 'docker login -u siddireddy --password-stdin < f:/password.txt' 
                    }
-                   bat 'docker tag devops-integration siddireddy/mymtechproj:myfirstimagepush'
+                   bat 'docker tag javatechie/devops-integration siddireddy/mymtechproj:myfirstimagepush'
                    bat 'docker push siddireddy/mymtechproj:myfirstimagepush'
                 }
             }
