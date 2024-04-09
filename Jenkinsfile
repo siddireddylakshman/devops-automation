@@ -21,7 +21,7 @@ pipeline {
             steps{
                 script{
                    withCredentials([usernamePassword(credentialsId: 'Docker', usernameVariable: 'PEGA_DB_USERNAME', passwordVariable: 'PEGA_DB_PASSWORD')]) {
-                   bat 'docker login -u Siddireddy -p ${dockerhubpwd}'
+                   bat 'docker login -u Siddireddy -p ${PEGA_DB_PASSWORD}'
 
 }
                    bat 'docker push javatechie/devops-integration'
